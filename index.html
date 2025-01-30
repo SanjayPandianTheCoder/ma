@@ -56,6 +56,24 @@
             setTimeout(() => heart.remove(), 5000);
         }
         setInterval(createHeart, 600);
+        document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("bg-music");
+    const musicBtn = document.getElementById("music-btn");
+
+    // Try to play automatically, catch if autoplay is blocked
+    audio.play().catch(error => console.log("Autoplay blocked", error));
+
+    // Toggle music on button click
+    musicBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            musicBtn.textContent = "🔊"; // Change icon to speaker
+        } else {
+            audio.pause();
+            musicBtn.textContent = "🎵"; // Change back to note
+        }
+    });
+});
     </script>
 </body>
 </html>
