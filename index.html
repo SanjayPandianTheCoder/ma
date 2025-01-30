@@ -35,6 +35,11 @@
     </div>
 
     <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const audio = document.getElementById("bg-music");
+        audio.play().catch(error => console.log("Autoplay blocked", error));
+  });
         const envelope = document.querySelector('.envelope-wrapper');
         envelope.addEventListener('click', () => {
             envelope.classList.toggle('flap');
