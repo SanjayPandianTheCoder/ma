@@ -124,7 +124,7 @@ body {
 
 .flap .letter {
   bottom: 300px;
-  transform: scale(1.5);
+  transform: scale(1.3);
   transition-delay: 1s;
 }
 
