@@ -190,9 +190,9 @@ body {
   background: var(--heart-color);
   color: white;
   border: none;
-  width: 50px;
+  width: 80px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 15%;
   font-size: 24px;
   cursor: pointer;
   display: flex;
