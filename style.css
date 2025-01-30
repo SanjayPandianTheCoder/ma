@@ -1,56 +1,4 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Letter Animation</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <!-- Floating hearts -->
-    <div class="hearts"></div>
-
-    <div class="container">
-        <div class="envelope-wrapper">
-            <div class="envelope">
-                <div class="letter">
-                    <div class="text">
-                        <strong>My Love ❤️</strong>
-                        <p>
-                            From the moment I met you, my heart knew you were special.  
-                            Every day with you is a beautiful journey, and I cherish every moment.  
-                            You are my happiness, my love, my everything.  
-                        </p>
-                        <p>Forever Yours,</p>
-                        <p><strong>Mathavan ❤️ Aishwarya</strong></p>
-                    </div>
-                </div>
-            </div>
-            <div class="heart"></div>
-        </div>
-    </div>
-
-    <script>
-        const envelope = document.querySelector('.envelope-wrapper');
-        envelope.addEventListener('click', () => {
-            envelope.classList.toggle('flap');
-        });
-
-        // Floating hearts animation
-        const heartsContainer = document.querySelector('.hearts');
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('floating-heart');
-            heart.style.left = `${Math.random() * 100}vw`;
-            heart.style.animationDuration = `${3 + Math.random() * 2}s`;
-            heartsContainer.appendChild(heart);
-            setTimeout(() => heart.remove(), 5000);
-        }
-        setInterval(createHeart, 600);
-    </script>
-</body>
-</html><style>:root {
+:root {
   --primary: #fff;
   --bg-color: #ffdde1;
   --bg-envelope-color: #fce4ec;
@@ -234,4 +182,4 @@ body {
     transform: translateY(-100vh) rotate(45deg);
     opacity: 0;
   }
-}</style>
+}
