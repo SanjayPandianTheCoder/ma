@@ -34,7 +34,7 @@
         </div>
     </div>
     <button id="music-btn">
-    🎵
+    Play
 </button>
 
     <script>
@@ -70,10 +70,10 @@
     musicBtn.addEventListener("click", () => {
         if (audio.paused) {
             audio.play();
-            musicBtn.textContent = "🔊"; // Change icon to speaker
+            musicBtn.textContent = "Pause"; // Change icon to speaker
         } else {
             audio.pause();
-            musicBtn.textContent = "🎵"; // Change back to note
+            musicBtn.textContent = "Play"; // Change back to note
         }
     });
 });
